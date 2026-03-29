@@ -1,0 +1,90 @@
+body {
+  background-color: #404a65;
+  color: #ecedf0;
+  font-family: "Kanit", sans-serif;
+  font-style: normal;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  flex-wrap: nowrap;
+}
+
+.heading {
+  margin-top: 40px;
+  font-weight: 600;
+  font-size: 4.5rem;
+  text-shadow: 2px 2px 0px #35383f;
+  -webkit-text-stroke-width: 3.5px;
+  -webkit-text-stroke-color: #35383f;
+  color: #ecedf0;
+}
+
+.subheading {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.button {
+  font-size: 1.25rem;
+  font-weight: 600;
+  background-color: #1f6fb0;
+  padding: 10px 35px;
+  border-radius: 12px;
+}
+
+.image {
+  padding-top: 40px;
+  padding-bottom: 15px;
+}
+
+.flip {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.coin {
+  transition: transform 0.7s ease-in-out;
+}
+
+.flip-animation {
+  animation: mycoin 1s ease-in-out;
+}
+
+@keyframes mycoin {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    filter: blur(0px);
+  }
+
+  30% {
+    filter: blur(4px);
+  }
+
+  70% {
+    filter: blur(4px);
+  }
+
+  100% {
+    transform: rotateX(1080deg);
+    filter: blur(0px);
+  }
+}
+
+
+@media screen and (max-width:580px){
+
+  body {
+    text-align: center;
+  }
+
+  .heading {
+    line-height: 5.5rem;
+  }
+  
+}
